@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants Login</title>
+</head>
+<body bgcolor="#87CEFA">
+    <h1 style="text-align: center;">Participants Registration</h1>
+    <table align="Center">
+        <tr>
+            <td><label>UserName :</label></td>
+            <td><input type="text" name="uname" required></td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td><label >E-mail :</label></td>
+            <td><input type = "email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Phone :</label></td>
+            <td><input type = "number" name="Phone" required></td>
+        </tr>
+        <tr>
+            <td><label>Participant Type :</label></td>
+            <br></br>
+            <td>
+                <select>
+                    <option value="Student">Student</option>
+                    <option value="Others">Others</option>
+                </select>
+            </td>          
+        </tr>
+        <tr>
+            <td><label>Event :</label></td>
+            <td>
+                <select>
+                    <option value = "Technical">Technical</option>
+                    <option value = "Technical">Non-Technical</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password :</label></td>
+            <td>
+            <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" onchange="form.pwd2.pattern = RegExp.escape(this.value);">
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" required name="pwd2"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" autofocus required onsubmit="AuthenticatorResponse"></td>
+        </tr>
+        
+
+    </table>
+</body>
+</html>
